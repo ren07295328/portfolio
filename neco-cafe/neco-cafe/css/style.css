@@ -1,0 +1,658 @@
+@charset "UTF-8";
+/* ------------------------共通------------------------------*/
+html{
+    font-size: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+    line-height: 1.7;
+    color: #432;
+}
+/* 画面が外側にはみ出ない */
+.big-bg{
+overflow: hidden;
+}
+/*背景画像の位置*/
+.big-bg{
+    background-size: cover;
+    background-position: center top;
+}
+/* -------------ヘッダー--------------*/
+.wrapper{
+    max-width: 100%;
+    margin: auto;
+    padding: 0 4%;
+}
+/*ヘッダー　メニュー部分*/
+.header ul{
+    display: flex;
+    justify-content: end;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    list-style: none;
+}
+li{
+    padding-left: 10px;
+}
+/*aタグ*/
+a{
+    text-align: center;
+    text-decoration: none;
+    color: #432;
+    width: 100%;
+    transition: all 0.05s;
+}
+/* aタグ ホバー */
+a:hover{
+    background-color: white;
+    color: #0bd;
+}
+/* ----------------フッター --------------*/
+footer{
+    background: #432;
+    text-align: center;
+    width: 100%;
+    padding: 26px 0;
+}
+footer p{
+    color: #000;
+    font-size: 0.875rem;
+}
+/*------------------------------HOME----------------------------------*/
+#home{
+    /* 色、画像*/
+    max-width: 100%;
+    font-family: serif;
+    line-height: 1.7;
+    color: #432;
+    background-image: url(../images/header.webp);
+    background-color: #ff99cc;
+    background-blend-mode:darken;
+    /* 位置、大きさ */
+    min-height: 100vh;
+}
+.home-content{
+    text-align: center;
+    margin-top: 10%;
+}
+.home-content p{
+    font-size: 1.125rem;
+    margin: 10px 0 42px;
+}
+/* 見出し */
+.page-title{
+    font-size: 5rem;
+    font-family: serif;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+/* ボタン */
+.botton{
+    font-size: 1.375rem;
+    background-color: pink;
+    color: #000;
+    border-radius: 5px;
+    padding: 18px 32px;
+}
+.botton:hover{
+    background-color: #0bd;
+    transform: translate(0.0);
+}
+/*-----------------------------NEWS------------------------------------*/
+
+/* news画面に含まれるすべての文字を中心に*/
+#news{
+    text-align: center;
+}
+/* ヘッダー写真*/
+#news{
+    background-image: url(../images/news.jpg);
+    background-size: 45%;
+    background-position: top;
+    background-repeat: repeat-x;
+    min-height: 100vh;
+    bottom: 400px;
+}
+/* -------ハイライト写真----------*/
+#news img{
+    max-width: 100%;
+    height: 550px;
+    margin: auto;
+}
+/* pxサイズとスマホサイズ */
+.pc { display: block !important; }
+.sp { display: none !important; }
+
+/* article */
+article{
+    width:74%;
+}
+/* aside*/
+aside{
+    width:22%;
+}
+/* articleとasideを74：22で間をあける */
+.news-contents{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* -----------article-------------- */
+
+/* ポストのタイトル文字、フォント */
+.post-title{
+    position: relative;
+    padding-top:4px;
+    margin-bottom: 40px;
+}
+.post-title{
+    font-family: serif;
+    font-size: 2rem;
+    font-weight: normal;
+}
+/* ポストの更新日データのboxサイズないしデザイン */
+.post-data{
+    background-color: pink;
+    border-radius: 50%;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    font-size: 1.625rem;
+    text-align: center;
+    position: absolute;
+    top: 320px;
+    left: 18%;
+    padding-top: 10px;
+}
+/* ポストの中の文字色、サイズ */
+.post-data span{
+    font-size: 1rem;
+    border-top: 1px rgba(255, 255, 255, .5) solid;
+    padding: 6px;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+/* ポストタイトル、ポストキャット左間隔 */
+.post-title
+.post-cat{
+    margin-left: 120px;
+}
+/* article間隔 */
+article{
+    margin-bottom: 20px;
+}
+/* article pの文字の間隔 */
+article p{
+    margin-bottom: 1rem;
+    padding: 12px 10px;
+}
+/* --------------aside-------------------*/
+
+/* 文字デザイン、アンダーライン*/
+.sub-title{
+    font-size: 1.375rem;
+    padding: 0 8px 8px;
+    border-bottom: 2px #0bd solid;
+    font-weight: normal;
+}
+/* 上下の間隔、aタグのアンダーライン打消し*/
+.sub-menu{
+    margin-bottom: 60px;
+    list-style: none;
+}
+/* アンダーラインの色 */
+.sub-menu li{
+    border-bottom: 1px #ddd solid;
+}
+/* aタグの色、内部間隔、ブロック要素 */
+.sub-menu a{
+    color: #432;
+    padding: 10px;
+    display: block;
+}
+/* サブメニューに触れると色が変わる（未実装） */
+.sub-menu:hover{
+    color: #0bd;
+}
+/* -------------------------------MENU--------------------------------- */
+
+/* メニューのbox配置 */
+.img-item{
+    display: flex;
+    justify-content: space-around;
+}
+/*親要素より大きくならない*/
+.item-group{
+    max-width: 100%;
+}
+/* menuタイトルを真ん中に */
+.menu-content .page-title{
+    text-align: center;
+}
+/* menu　p真ん中に */
+.menu-content p{
+    margin-top: 5%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+/* 下menu画像のボトムの距離 */
+.tile-bottom-img{
+    margin-bottom: 10%;
+}
+/* menu画像の幅、大きさ */
+.item1{
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 7px;
+    max-width: 100%;
+}
+
+/* メニューアニメーション
+.menu-content{
+    width: 100%;
+}
+#menu .img-item{
+    animation-name: animations;
+    /* 20秒かけて */
+    /* animation-duration: 1s; */
+    /* 周期*/
+    /* animation-timing-function: ease; */
+    /* 0.5秒後 */
+    /* animation-delay: 0.5s; */
+    /* 無限 */
+    /* animation-iteration-count: 1; */
+    /* アニメーション終了後の形*/
+    /* animation-fill-mode: forwards; */
+    /* 非表示 */
+    /* overflow: hidden; */
+
+/* ----------------------------CONTENT------------------------------- */
+
+/* contentタイトル */
+#content .page-title{
+    text-align: left;
+}
+/* content背景 */
+#content{
+    background-image: url(../images/content.jpg);
+    max-width: 100%;
+    min-height: 100vh;
+}
+/* フォーム　div単位間隔 */
+form div{
+    margin-bottom: 14px;
+}
+/* ラベルフォントサイズ、下間隔 */
+label{
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    display: block;
+}
+/* emeil */
+input[type=text]
+input [type=email]
+textarea{
+    background-color: rgba(255, 255, 255, .5);
+    border: 1px white solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+input[type=text]
+input[type=email]{
+    width: 100%;
+    max-width: 240px;
+}
+textarea{
+    width: 100%;
+    max-width: 480px;
+    height: 6rem;
+}
+input[type=submit]{
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+}
+/* --------------location-------------- */
+#location{
+    padding: 4% 0;
+}
+#location{
+    display: flex;
+    justify-content: space-between;
+}
+.location-info{
+    width: 22%;
+}
+.location-info{
+    padding: 12px 10px;
+    margin-left: 5%;
+}
+/* -------location Map------- */
+.location-map{
+    filter: grayscale(100%);
+    width: 74%;
+}
+.pc-map{
+        width: 900px;
+        height: 500px;
+}
+/* ---------SNS----------- */
+/* snsの線 */
+#sns{
+    width: 100%;
+    background-color: #faf7f0;
+    padding: 4% 0;
+}
+/* sns box配置 */
+#sns .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+/* snsタイトル間隔 */
+#sns .sub-title{
+    margin: 30px;
+}
+/*sns box幅*/
+.sns-box{
+    width: 30%;
+}
+
+/* --------------------------------レスポンシブ -------------------------------------*/
+
+/* ------------------iPhone　XR -----------------------*/
+@media screen and (max-width:414px){
+    /* ------フォントサイズ------- */
+    /* タイトルフォント */
+    .page-title{
+        font-size: 3rem;
+    }
+    /* コンテンツフォント */
+    p{
+        font-size: 0.8rem;
+    }
+    /* snsboxサイズ（線） */
+    #sns .sns-box{
+        width: 100%;
+    }
+    
+    /* ----------------NEWS------------------ */
+    /* 更新日box */
+    .post-data{
+        width: 70px;
+        height: 70px;
+        font-size: 1rem;
+        left: 10px;
+        top: 34%;
+    }
+     /* ----asideとarticle------- */
+     /* 縦に並べる */
+    .news-contents{
+        flex-direction: column;
+    }
+    /* 幅 */
+    article,
+    aside{
+        width: 100%;
+    }
+    /* サブメニュー幅 */
+    .sub-menu{
+        width: 75%;
+    }
+    /* スマホ画面での画像サイズ */
+    .pc { display: none !important; }
+    .sp { display: block !important; }
+    #news .sp{
+        height: 300px;
+    }
+    /*-------------------MENU----------------------*/
+    /* menu画像を縦にする */
+    .menu-content{
+        flex-direction: column;
+    }
+    #menu .img-item{
+        flex-direction: column;
+    }
+    /*------------------CONTENT---------------------*/
+    /* 縦画面にする */
+    #content{
+        background-position: right;
+    }
+    #location{
+        flex-direction: column;
+    }
+    /* sns,線とboxどちらも縦にする */
+    .location .wrapper,
+    #sns .wrapper{
+        flex-direction: column;
+    }
+    /* info,map,snsbox　サイズ */
+    .location-info,
+    .location-map
+    .sns-box{
+        width: 100%;
+    }
+    /* info部分文字の位置 */
+    .location-info h3,p{
+        text-align: center;
+    }
+    .location-info{
+        margin: auto;
+    }
+    /* mapサイズ */
+    .sp-map{
+        width: 410px;
+        height: 300px;
+    }
+}
+/* ------------------iPhone　12Pro -----------------------*/
+@media screen and (max-width:390px){
+    .post-data{
+        width: 70px;
+        height: 70px;
+        font-size: 1rem;
+        left: 5px;
+        top: 36%;
+    }
+    .sp-map{
+        width: 390px;
+        height: 300px;
+    }
+}
+/* ------------------iPhone SE -----------------------*/
+@media screen and (max-width:375px){
+    .post-data{
+        width: 70px;
+        height: 70px;
+        font-size: 1rem;
+        left: 10px;
+        top: 45%;
+    }
+    .sp-map{
+        width: 370px;
+        height: 300px;
+    }
+}
+/* 14インチノートパソコン-----------------------------------------------------*/
+@media screen and (min-width:1240px) and (max-width:1400px){
+    p{
+        font-size: 0.9rem;
+    }
+    /* スマホ画面での画像サイズ */
+    .pc { display: none !important; }
+    .sp { display: block !important; }
+    #news .sp{
+        height: 300px;
+    }
+    /* ----NEWS---- */
+    /* コンテンツ配置 */
+    .news-contents{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    /* article */
+    article{
+        width: 70%;
+        margin-bottom: 20%;
+    }
+    /* aside */
+    aside{
+        width: 30%;
+        margin-top: 5%;
+    }
+    /* 更新日box配置 */
+    .post-data{
+        width: 70px;
+        height: 70px;
+        font-size: 1rem;
+        left: 18%;
+        top: 43%;
+    }
+    /* ----MENU---- */
+    .item1{
+        margin:40px auto;
+        width: 400px;
+    }
+/*-------1400以下で縦にする--------*/
+    .menu-content{
+        flex-direction: column;
+    }
+}
+/* -------------------ハンバーガー-------------------*/
+.c-header {
+    align-items: center;
+    background-color: rgb(245, 223, 247);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    width: 100%;
+    z-index: 999;
+}
+
+.c-header__logo {
+    color: #000;
+    min-width: 80px;
+    text-decoration: none;
+}
+
+.c-header__list{
+    box-sizing: border-box;
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+}
+
+.c-header__list-item {
+    list-style: none;
+    text-decoration: none;
+}
+
+.c-header__list-link {
+    color: #000;
+    display: block;
+    margin-right: 20px;
+    text-decoration: none;
+    padding: 10px 0px;
+}
+
+.c-header__list-link:hover {
+    filter: opacity(0.6);
+}
+
+.c-hamburger-menu {
+    position: relative;
+}
+
+@media screen and (max-width: 750px) {
+    .c-hamburger-menu__list {
+        background-color: #eeeeee;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        padding: 2rem;
+        position: absolute;
+        transform: translateX(-100%);
+        transition: 0.3s;
+        top: 100%;
+        width: 100%;
+    }
+
+    #hamburger:checked ~ .c-hamburger-menu__list {
+        transform: translateX(0%);
+        transition: 0.3s;
+    }
+}
+
+.c-hamburger-menu__input {
+    display: none;
+}
+
+.c-hamburger-menu__bg {
+    background-color: #000;
+    cursor: pointer;
+    display: none;
+    height: 100vh;
+    left: 0;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+#hamburger:checked ~ .c-hamburger-menu__bg {
+    display: block;
+}
+
+.c-hamburger-menu__button {
+    display: none;
+}
+
+@media screen and (max-width: 750px) {
+    .c-hamburger-menu__button {
+    align-items: center;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 32px;
+    justify-content: center;
+    width: 32px;
+    }
+}
+.c-hamburger-menu__button-mark {
+    background-color: #000;
+    display: block;
+    height: 1px;
+    transition: 0.3s;
+    width: 20px;
+}
+
+@media screen and (max-width: 750px) {
+    #hamburger:checked
+    ~ .c-hamburger-menu__button
+    .c-hamburger-menu__button-mark:nth-of-type(1) {
+    transform: translate(2px, 1px) rotate(45deg);
+    transform-origin: 0%;
+    }
+    #hamburger:checked
+        ~ .c-hamburger-menu__button
+        .c-hamburger-menu__button-mark:nth-of-type(2) {
+        opacity: 0;
+    }
+    #hamburger:checked
+        ~ .c-hamburger-menu__button
+        .c-hamburger-menu__button-mark:nth-of-type(3) {
+    transform: translate(2px, 3px) rotate(-45deg); 
+    transform-origin: 0%;
+    }
+}
